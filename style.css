@@ -1,0 +1,362 @@
+/* ======================================
+   NutriTrack - Design général
+   Mode sombre - Mobile First
+====================================== */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: "Arial", sans-serif;
+
+    background: #0F172A;
+
+    color: #FFFFFF;
+
+    min-height: 100vh;
+
+}
+
+
+
+/* ======================================
+   CONTENEUR PRINCIPAL
+====================================== */
+
+
+main {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: auto;
+
+    padding: 20px;
+
+}
+
+
+
+/* ======================================
+   TITRES
+====================================== */
+
+
+h1 {
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+}
+
+
+h2 {
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+/* ======================================
+   HEADER
+====================================== */
+
+
+header {
+
+    max-width: 500px;
+
+    margin: auto;
+
+    padding: 20px;
+
+}
+
+
+
+header p {
+
+    color: #94A3B8;
+
+    margin-top: 8px;
+
+}
+
+
+
+/* ======================================
+   CARTES
+====================================== */
+
+
+.card {
+
+    background: #1E293B;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.25);
+
+
+}
+
+
+
+/* ======================================
+   BOUTONS
+====================================== */
+
+
+button {
+
+    width: 100%;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #22C55E;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+
+    transition: 0.2s;
+
+}
+
+
+
+button:hover {
+
+    opacity: 0.85;
+
+}
+
+
+
+button:active {
+
+    transform: scale(0.97);
+
+}
+
+
+
+/* ======================================
+   INPUTS
+====================================== */
+
+
+input,
+select {
+
+    width: 100%;
+
+    height: 50px;
+
+    margin-bottom: 15px;
+
+    padding: 0 15px;
+
+
+    border-radius: 15px;
+
+    border: none;
+
+    outline: none;
+
+
+    background: #334155;
+
+    color: white;
+
+    font-size: 16px;
+
+}
+
+
+
+input::placeholder {
+
+    color: #94A3B8;
+
+}
+
+
+
+/* ======================================
+   PAGE CONNEXION / INSCRIPTION
+====================================== */
+
+
+.auth-container {
+
+
+    width: 90%;
+
+    max-width: 400px;
+
+    margin: 80px auto;
+
+
+    background: #1E293B;
+
+    padding: 30px;
+
+
+    border-radius: 25px;
+
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.3);
+
+
+}
+
+
+
+.auth-container h1 {
+
+    text-align: center;
+
+    color: #22C55E;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.auth-container h2 {
+
+    text-align: center;
+
+}
+
+
+
+/* ======================================
+   LIENS
+====================================== */
+
+
+a {
+
+    color: #22C55E;
+
+    text-decoration: none;
+
+}
+
+
+
+/* ======================================
+   BARRE DE PROGRESSION CALORIES
+====================================== */
+
+
+.progress-bar {
+
+
+    width: 100%;
+
+    height: 15px;
+
+    background: #334155;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+
+}
+
+
+
+.progress {
+
+
+    width: 50%;
+
+    height: 100%;
+
+    background: #22C55E;
+
+    border-radius: 20px;
+
+
+}
+
+
+
+/* ======================================
+   AVATAR
+====================================== */
+
+
+.avatar {
+
+
+    width: 100px;
+
+    height: 100px;
+
+
+    border-radius: 50%;
+
+
+    object-fit: cover;
+
+
+    border: 3px solid #22C55E;
+
+
+}
+
+
+
+/* ======================================
+   RESPONSIVE PC
+====================================== */
+
+
+@media (min-width: 700px){
+
+
+    body {
+
+        display:flex;
+
+        justify-content:center;
+
+    }
+
+
+}
