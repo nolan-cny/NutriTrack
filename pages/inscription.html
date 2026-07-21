@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inscription - NutriTrack</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="auth-container">
+
+    <h1>NutriTrack</h1>
+
+    <h2>Créer un compte</h2>
+
+
+    <input 
+    id="pseudo"
+    type="text"
+    placeholder="Pseudo">
+
+
+    <input 
+    id="email"
+    type="email"
+    placeholder="Email">
+
+
+    <input 
+    id="password"
+    type="password"
+    placeholder="Mot de passe">
+
+
+    <button id="registerBtn">
+        S'inscrire
+    </button>
+
+
+    <button id="googleBtn">
+        Continuer avec Google
+    </button>
+
+
+    <p>
+        Déjà un compte ?
+        <a href="connexion.html">
+            Se connecter
+        </a>
+    </p>
+
+
+</div>
+
+
+
+<script type="module">
+
+
+import {
+    registerUser,
+    loginGoogle
+
+} from "../js/auth.js";
+
+
+
+// Bouton inscription
+
+document
+.getElementById("registerBtn")
+.addEventListener(
+"click",
+async()=>{
+
+
+    const pseudo =
+    document.getElementById("pseudo").value;
+
+
+    const email =
+    document.getElementById("email").value;
+
+
+    const password =
+    document.getElementById("password").value;
+
+
+
+    try{
+
+
+        await registerUser(
+            email,
+            password,
+            pseudo
+        );
+
+
+        alert(
+        "Compte créé !"
+        );
+
+
+        window.location.href =
+        "../index.html";
+
+
+
+    }catch(error){
+
+
+        alert(
+        error.message
+        );
+
+
+    }
+
+
+
+});
+
+
+
+
+// Bouton Google
+
+document
+.getElementById("googleBtn")
+.addEventListener(
+"click",
+async()=>{
+
+
+    try{
+
+
+        await loginGoogle();
+
+
+        window.location.href =
+        "../index.html";
+
+
+    }catch(error){
+
+        alert(error.message);
+
+    }
+
+
+});
+
+
+
+</script>
+
+
+</body>
+
+</html>
