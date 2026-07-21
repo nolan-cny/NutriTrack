@@ -360,3 +360,48 @@ a {
 
 
 }
+
+
+/* MENU */
+
+#menu-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+#sidebar {
+
+    position: fixed;
+
+    top: 0;
+    left: -260px;
+
+    width: 250px;
+    height: 100vh;
+
+    background: #1E293B;
+
+    padding: 30px;
+
+    transition: 0.3s;
+
+    z-index: 1000;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#sidebar h2 {
+    color: #22C55E;
+    margin-bottom: 30px;
+}
+
+#sidebar a {
+    display: block;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 18px;
+}

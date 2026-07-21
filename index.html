@@ -23,172 +23,57 @@ Connexion - NutriTrack
 
 
 <body>
+<header>
+    <button id="menu-btn">☰</button>
 
+    <div>
+        <h1>NutriTrack</h1>
+        <p>Suivi de tes objectifs au quotidien</p>
+    </div>
+</header>
 
+<nav id="sidebar">
 
-<div class="auth-container">
+    <h2>NutriTrack</h2>
 
+    <a href="#">Accueil</a>
+    <a href="#">Bibliothèque</a>
+    <a href="#">Calendrier</a>
+    <a href="#">Profil</a>
+    <a href="#" id="logout">Déconnexion</a>
 
-<h1>
-NutriTrack
-</h1>
+</nav>
 
+<main>
 
-<h2>
-Connexion
-</h2>
+    <div class="card">
 
+        <h2>Calories aujourd'hui</h2>
 
+        <h1>0 / 2500 kcal</h1>
 
-<input
-id="email"
-type="email"
-placeholder="Email">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
 
+    </div>
 
+    <div class="card">
 
-<input
-id="password"
-type="password"
-placeholder="Mot de passe">
+        <h2>Macros</h2>
 
+        <p>🥩 Protéines : 0 g</p>
+        <p>🍚 Glucides : 0 g</p>
+        <p>🥑 Lipides : 0 g</p>
 
+    </div>
 
-<button id="loginBtn">
+</main>
 
-Se connecter
+<script src="js/navigation.js"></script>
 
-</button>
 
 
-
-<button id="googleBtn">
-
-Continuer avec Google
-
-</button>
-
-
-
-<p>
-
-Pas encore inscrit ?
-
-<a href="inscription.html">
-
-Créer un compte
-
-</a>
-
-</p>
-
-
-
-</div>
-
-
-
-
-<script type="module">
-
-
-import {
-
-loginUser,
-loginGoogle
-
-}
-
-from "../js/auth.js";
-
-
-
-
-// Connexion classique
-
-
-document
-.getElementById("loginBtn")
-.addEventListener(
-"click",
-async()=>{
-
-
-const email =
-document.getElementById("email").value;
-
-
-
-const password =
-document.getElementById("password").value;
-
-
-
-try{
-
-
-await loginUser(
-email,
-password
-);
-
-
-
-window.location.href =
-"../index.html";
-
-
-
-}catch(error){
-
-
-alert(error.message);
-
-
-}
-
-
-});
-
-
-
-
-// Google
-
-
-document
-.getElementById("googleBtn")
-.addEventListener(
-"click",
-async()=>{
-
-
-try{
-
-
-await loginGoogle();
-
-
-window.location.href =
-"../index.html";
-
-
-
-}catch(error){
-
-
-alert(error.message);
-
-
-}
-
-
-
-});
-
-
-
-</script>
 
 
 
