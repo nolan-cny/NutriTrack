@@ -427,3 +427,25 @@ a {
 
     z-index: 999;
 }
+
+/* PROFIL */
+
+.profil-card {
+
+    text-align: center;
+
+}
+
+
+.profil-card h2 {
+
+    margin-top: 15px;
+
+}
+
+
+.profil-card p {
+
+    color: #94A3B8;
+
+}
