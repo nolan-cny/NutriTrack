@@ -405,3 +405,25 @@ a {
     color: white;
     font-size: 18px;
 }
+
+/* BOUTON FLOTTANT */
+
+#add-meal-btn {
+
+    position: fixed;
+
+    bottom: 30px;
+    right: 30px;
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    font-size: 35px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.3);
+
+    z-index: 999;
+}
