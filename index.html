@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 
 <head>
+
 
 <meta charset="UTF-8">
 
@@ -11,21 +11,22 @@ content="width=device-width, initial-scale=1.0">
 
 
 <title>
-NutriTrack
+Connexion - NutriTrack
 </title>
 
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 
 
 </head>
+
 
 
 <body>
 
 
 
-<header>
+<div class="auth-container">
 
 
 <h1>
@@ -33,94 +34,165 @@ NutriTrack
 </h1>
 
 
-<p>
-Bonjour <span id="username">
-</span> 👋
-</p>
-
-
-</header>
-
-
-
-
-<main>
-
-
-<section class="card">
-
-
 <h2>
-Aujourd'hui
+Connexion
 </h2>
 
 
+
+<input
+id="email"
+type="email"
+placeholder="Email">
+
+
+
+<input
+id="password"
+type="password"
+placeholder="Mot de passe">
+
+
+
+<button id="loginBtn">
+
+Se connecter
+
+</button>
+
+
+
+<button id="googleBtn">
+
+Continuer avec Google
+
+</button>
+
+
+
 <p>
-Calories :
-<span>
-0
-</span>
-/
-<span>
-2000
-</span>
-kcal
+
+Pas encore inscrit ?
+
+<a href="inscription.html">
+
+Créer un compte
+
+</a>
+
 </p>
 
 
-<p>
-Protéines :
-0 g
-</p>
-
-
-<p>
-Glucides :
-0 g
-</p>
-
-
-<p>
-Lipides :
-0 g
-</p>
-
-
-
-</section>
-
-
-
-
-<section class="card">
-
-
-<h2>
-Progression
-</h2>
-
-
-<div class="progress-bar">
-
-<div class="progress">
-
-</div>
 
 </div>
 
 
-</section>
+
+
+<script type="module">
+
+
+import {
+
+loginUser,
+loginGoogle
+
+}
+
+from "../js/auth.js";
 
 
 
-</main>
+
+// Connexion classique
+
+
+document
+.getElementById("loginBtn")
+.addEventListener(
+"click",
+async()=>{
+
+
+const email =
+document.getElementById("email").value;
+
+
+
+const password =
+document.getElementById("password").value;
+
+
+
+try{
+
+
+await loginUser(
+email,
+password
+);
+
+
+
+window.location.href =
+"../index.html";
+
+
+
+}catch(error){
+
+
+alert(error.message);
+
+
+}
+
+
+});
 
 
 
 
-<script type="module" src="js/app.js"></script>
+// Google
+
+
+document
+.getElementById("googleBtn")
+.addEventListener(
+"click",
+async()=>{
+
+
+try{
+
+
+await loginGoogle();
+
+
+window.location.href =
+"../index.html";
+
+
+
+}catch(error){
+
+
+alert(error.message);
+
+
+}
+
+
+
+});
+
+
+
+</script>
+
 
 
 </body>
+
 
 </html>
