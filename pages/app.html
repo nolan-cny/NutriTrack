@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>NutriTrack</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="header-app">
+
+        <h1>NutriTrack</h1>
+
+        <button id="settingsButton">
+            ☰
+        </button>
+
+    </header>
+
+
+
+    <!-- SECTION ACCUEIL -->
+
+    <main id="appContainer">
+
+
+        <section id="accueilSection">
+
+            <div class="card">
+
+                <h2>Calories</h2>
+
+                <h1 id="currentCalories">
+
+                    0 / 2500 kcal
+
+                </h1>
+
+                <h3 id="progressPercent">
+
+                    0 %
+
+                </h3>
+
+
+                <div class="progress-bar">
+
+                    <div class="progress">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h2>Macros</h2>
+
+                <p>
+
+                    🥩 Protéines :
+                    <span id="proteines">
+
+                        0 g
+
+                    </span>
+
+                </p>
+
+
+                <p>
+
+                    🍚 Glucides :
+                    <span id="glucides">
+
+                        0 g
+
+                    </span>
+
+                </p>
+
+
+                <p>
+
+                    🥑 Lipides :
+                    <span id="lipides">
+
+                        0 g
+
+                    </span>
+
+                </p>
+
+            </div>
+
+
+
+
+            <div class="card">
+
+                <h2>Calories restantes</h2>
+
+                <h3 id="remainingCalories">
+
+                    2500 kcal
+
+                </h3>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h2>Derniers repas</h2>
+
+                <p>
+
+                    Aucun repas aujourd'hui.
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- PROFIL -->
+
+        <section id="profilSection"
+            style="display:none;">
+
+        </section>
+
+
+
+        <!-- CALENDRIER -->
+
+        <section id="calendrierSection"
+            style="display:none;">
+
+        </section>
+
+
+
+        <!-- BIBLIOTHÈQUE -->
+
+        <section id="bibliothequeSection"
+            style="display:none;">
+
+        </section>
+
+
+
+    </main>
+
+
+
+
+    <!-- BOUTON AJOUTER UN REPAS -->
+
+    <button id="addMealButton">
+
+        +
+
+    </button>
+
+
+
+
+    <!-- MENU PARAMÈTRES -->
+
+    <div id="settingsMenu"
+        style="display:none;">
+
+
+        <button>
+
+            Changer de compte
+
+        </button>
+
+
+        <button>
+
+            Modifier mon profil
+
+        </button>
+
+
+        <button id="logoutButton">
+
+            Déconnexion
+
+        </button>
+
+
+    </div>
+
+
+
+
+    <!-- NAVIGATION MOBILE -->
+
+    <nav class="bottom-nav">
+
+
+        <button id="homeButton">
+
+            🏠
+
+            <span>
+
+                Accueil
+
+            </span>
+
+        </button>
+
+
+
+        <button id="calendarButton">
+
+            📅
+
+            <span>
+
+                Calendrier
+
+            </span>
+
+        </button>
+
+
+
+        <button id="mealButton">
+
+            ➕
+
+            <span>
+
+                Repas
+
+            </span>
+
+        </button>
+
+
+
+        <button id="libraryButton">
+
+            📚
+
+            <span>
+
+                Bibliothèque
+
+            </span>
+
+        </button>
+
+
+
+        <button id="profileButton">
+
+            👤
+
+            <span>
+
+                Profil
+
+            </span>
+
+        </button>
+
+
+
+    </nav>
+
+
+
+    <script type="module" src="../js/app.js"></script>
+
+</body>
+
+</html>
