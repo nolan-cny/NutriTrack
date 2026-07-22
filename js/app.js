@@ -1,9 +1,16 @@
-// ======================================
-// NutriTrack - Gestion générale de l'app
-// ======================================
+import {
+
+    auth
+
+} from "./firebase.js";
 
 
-// Import Firebase Auth
+import {
+
+    onAuthStateChanged
+
+} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+
 import { checkAuth } from "./auth.js";
 
 
@@ -250,3 +257,34 @@ if (settingsButton) {
 // on affiche toujours l'accueil.
 
 showAccueil();
+
+// ====================================
+// VERIFICATION DE LA CONNEXION
+// ====================================
+
+
+onAuthStateChanged(auth, (user) => {
+
+
+    // L'utilisateur est connecté
+
+    if (user) {
+
+        console.log("Utilisateur connecté.");
+
+        console.log(user.uid);
+
+    }
+
+
+    // L'utilisateur n'est pas connecté
+
+    else {
+
+        window.location.href =
+        "connexion.html";
+
+    }
+
+
+});
