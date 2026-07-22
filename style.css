@@ -1,451 +1,341 @@
-/* ======================================
-   NutriTrack - Design général
-   Mode sombre - Mobile First
-====================================== */
+/* ================================= */
+/*          NUTRITRACK               */
+/* ================================= */
 
-
-/* RESET */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 
-body {
+body{
 
-    font-family: "Arial", sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 
-    background: #0F172A;
+    background-color:#0F172A;
 
-    color: #FFFFFF;
+    color:white;
 
-    min-height: 100vh;
+    min-height:100vh;
 
-}
-
-
-
-/* ======================================
-   CONTENEUR PRINCIPAL
-====================================== */
-
-
-main {
-
-    width: 100%;
-
-    max-width: 500px;
-
-    margin: auto;
-
-    padding: 20px;
+    padding-bottom:120px;
 
 }
 
 
-
-/* ======================================
-   TITRES
-====================================== */
-
-
-h1 {
-
-    font-size: 28px;
-
-    font-weight: 700;
-
-}
+/* ================================= */
+/*              HEADER               */
+/* ================================= */
 
 
-h2 {
+.header-app{
 
-    font-size: 20px;
+    display:flex;
 
-    margin-bottom: 15px;
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px;
 
 }
 
 
+.header-app h1{
 
-/* ======================================
-   HEADER
-====================================== */
-
-
-header {
-
-    max-width: 500px;
-
-    margin: auto;
-
-    padding: 20px;
+    font-size:30px;
 
 }
 
 
+#settingsButton{
 
-header p {
+    border:none;
 
-    color: #94A3B8;
+    background:none;
 
-    margin-top: 8px;
+    color:white;
+
+    cursor:pointer;
+
+    font-size:30px;
 
 }
 
 
+/* ================================= */
+/*               MAIN                */
+/* ================================= */
 
-/* ======================================
-   CARTES
-====================================== */
+
+main{
+
+    padding:20px;
+
+}
 
 
-.card {
+.card{
 
-    background: #1E293B;
+    background-color:#1E293B;
 
-    border-radius: 20px;
+    border-radius:25px;
 
-    padding: 20px;
+    padding:25px;
 
-    margin-bottom: 20px;
-
+    margin-bottom:20px;
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,0.25);
+    0 10px 25px
+    rgba(0,0,0,0.30);
 
+}
+
+
+.card h2{
+
+    margin-bottom:20px;
+
+}
+
+
+.card h3{
+
+    margin-top:15px;
+
+}
+
+
+.card p{
+
+    margin-top:12px;
+
+    font-size:18px;
+
+}
+
+
+/* ================================= */
+/*          BARRE DE PROGRESSION     */
+/* ================================= */
+
+
+.progress-bar{
+
+    width:100%;
+
+    height:18px;
+
+    background-color:#334155;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin-top:20px;
+
+}
+
+
+.progress{
+
+    width:0%;
+
+    height:100%;
+
+    background-color:#22C55E;
+
+    border-radius:50px;
+
+    transition:0.4s;
 
 }
 
 
 
-/* ======================================
-   BOUTONS
-====================================== */
+/* ================================= */
+/*          BOUTON +                 */
+/* ================================= */
 
 
-button {
-
-    width: 100%;
-
-    height: 50px;
-
-    border: none;
-
-    border-radius: 15px;
-
-    background: #22C55E;
-
-    color: white;
-
-    font-size: 16px;
-
-    font-weight: bold;
-
-    cursor: pointer;
+#addMealButton{
 
 
-    transition: 0.2s;
+    position:fixed;
 
-}
+    bottom:95px;
 
+    right:25px;
 
+    width:75px;
 
-button:hover {
+    height:75px;
 
-    opacity: 0.85;
+    border:none;
 
-}
+    border-radius:50%;
 
+    cursor:pointer;
 
+    font-size:40px;
 
-button:active {
+    color:white;
 
-    transform: scale(0.97);
-
-}
-
-
-
-/* ======================================
-   INPUTS
-====================================== */
-
-
-input,
-select {
-
-    width: 100%;
-
-    height: 50px;
-
-    margin-bottom: 15px;
-
-    padding: 0 15px;
-
-
-    border-radius: 15px;
-
-    border: none;
-
-    outline: none;
-
-
-    background: #334155;
-
-    color: white;
-
-    font-size: 16px;
-
-}
-
-
-
-input::placeholder {
-
-    color: #94A3B8;
-
-}
-
-
-
-/* ======================================
-   PAGE CONNEXION / INSCRIPTION
-====================================== */
-
-
-.auth-container {
-
-
-    width: 90%;
-
-    max-width: 400px;
-
-    margin: 80px auto;
-
-
-    background: #1E293B;
-
-    padding: 30px;
-
-
-    border-radius: 25px;
-
+    background-color:#22C55E;
 
     box-shadow:
-    0 15px 40px rgba(0,0,0,0.3);
+    0 10px 25px
+    rgba(0,0,0,0.35);
 
+}
+
+
+#addMealButton:hover{
+
+    transform:scale(1.05);
 
 }
 
 
 
-.auth-container h1 {
+/* ================================= */
+/*         MENU PARAMETRES           */
+/* ================================= */
 
-    text-align: center;
 
-    color: #22C55E;
+#settingsMenu{
 
-    margin-bottom: 20px;
+    position:fixed;
+
+    top:85px;
+
+    right:20px;
+
+    width:220px;
+
+    padding:20px;
+
+    background-color:#1E293B;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 25px
+    rgba(0,0,0,0.35);
+
+}
+
+
+#settingsMenu button{
+
+
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    margin-top:10px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background-color:#334155;
 
 }
 
 
 
-.auth-container h2 {
-
-    text-align: center;
-
-}
+/* ================================= */
+/*         NAVIGATION MOBILE         */
+/* ================================= */
 
 
+.bottom-nav{
 
-/* ======================================
-   LIENS
-====================================== */
+    position:fixed;
 
+    bottom:0;
 
-a {
+    left:0;
 
-    color: #22C55E;
+    width:100%;
 
-    text-decoration: none;
+    display:flex;
 
-}
+    justify-content:space-around;
 
+    align-items:center;
 
+    padding:15px;
 
-/* ======================================
-   BARRE DE PROGRESSION CALORIES
-====================================== */
+    background-color:#1E293B;
 
-
-.progress-bar {
-
-
-    width: 100%;
-
-    height: 15px;
-
-    background: #334155;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
+    box-shadow:
+    0 -10px 25px
+    rgba(0,0,0,0.30);
 
 }
 
 
+.bottom-nav button{
 
-.progress {
+    border:none;
 
+    background:none;
 
-    width: 50%;
+    color:white;
 
-    height: 100%;
+    cursor:pointer;
 
-    background: #22C55E;
+    display:flex;
 
-    border-radius: 20px;
+    flex-direction:column;
 
+    align-items:center;
 
-}
+    gap:5px;
 
-
-
-/* ======================================
-   AVATAR
-====================================== */
-
-
-.avatar {
-
-
-    width: 100px;
-
-    height: 100px;
-
-
-    border-radius: 50%;
-
-
-    object-fit: cover;
-
-
-    border: 3px solid #22C55E;
-
+    font-size:22px;
 
 }
 
 
+.bottom-nav span{
 
-/* ======================================
-   RESPONSIVE PC
-====================================== */
+    font-size:12px;
 
-
-@media (min-width: 700px){
+}
 
 
-    body {
+/* ================================= */
+/*          RESPONSIVE PC            */
+/* ================================= */
 
-        display:flex;
 
-        justify-content:center;
+@media(min-width:900px){
+
+
+    main{
+
+        max-width:900px;
+
+        margin:auto;
 
     }
 
 
-}
+    .header-app{
 
+        max-width:900px;
 
-/* MENU */
+        margin:auto;
 
-#menu-btn {
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
-    margin-bottom: 15px;
-}
+    }
 
-#sidebar {
-
-    position: fixed;
-
-    top: 0;
-    left: -260px;
-
-    width: 250px;
-    height: 100vh;
-
-    background: #1E293B;
-
-    padding: 30px;
-
-    transition: 0.3s;
-
-    z-index: 1000;
-}
-
-#sidebar.active {
-    left: 0;
-}
-
-#sidebar h2 {
-    color: #22C55E;
-    margin-bottom: 30px;
-}
-
-#sidebar a {
-    display: block;
-    margin-bottom: 20px;
-    color: white;
-    font-size: 18px;
-}
-
-/* BOUTON FLOTTANT */
-
-#add-meal-btn {
-
-    position: fixed;
-
-    bottom: 30px;
-    right: 30px;
-
-    width: 65px;
-    height: 65px;
-
-    border-radius: 50%;
-
-    font-size: 35px;
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.3);
-
-    z-index: 999;
-}
-
-/* PROFIL */
-
-.profil-card {
-
-    text-align: center;
-
-}
-
-
-.profil-card h2 {
-
-    margin-top: 15px;
-
-}
-
-
-.profil-card p {
-
-    color: #94A3B8;
 
 }
